@@ -1,4 +1,4 @@
-import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
+import { HashRouter, NavLink, Route, Routes } from "react-router-dom";
 import ChatPage from "./pages/ChatPage";
 import ProfilePage from "./pages/ProfilePage";
 import PensionSimulatorPage from "./pages/PensionSimulatorPage";
@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <nav className="top-nav">
         <NavLink to="/" end>
           연금 시뮬레이터
@@ -19,7 +19,7 @@ function App() {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/chat" element={<ChatPage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
